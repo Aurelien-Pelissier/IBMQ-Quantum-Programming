@@ -1,4 +1,4 @@
-# Quantum-computing
+# Quantum Computing
 
 <img align="right" src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Complexity.jpg" width=450>
 During the last decades, considerable progress has been made in the development of quantum computers, and a breakthrough in this field will have massive application in our society, particularily in research, cryptography and logistic. Google and IBM recently claimed the creation of a 72 and 50 qubit quantum chips respectively, making the likelihood for a potential 
@@ -12,4 +12,6 @@ In May 2016, IBM launched Quantum Experience (QX), which enables anyone to easil
 
 &nbsp;
 
-This repository is an introdution to quantum computing and countain the source code to run simples quantum algorithms
+This repository is an introdution to quantum computing and countain the source code to run simples quantum algorithms. It is implemented with the python library `QISKit`, than one can easily install with `$ pip install qiskit` (`Python 3.5` required). For more information, you can check https://qiskit.org/.
+
+## Quantum Gates
