@@ -7,7 +7,7 @@ imminent quantum supremacy even more likely.
 
 &nbsp;
 
-In May 2016, IBM launched Quantum Experience (QX), which enables anyone to easily connect to the 5qubit IBM’s quantum processors via the IBM Cloud to run algorithms and experiments. (https://www.research.ibm.com/ibm-q/). Along with it's platform, IBM also developped `QISKit`, a Python library for the Quantum Experience API, where useres can more easily apply quantum gates to qubit and implement complex quantum algorithms. 
+In May 2016, IBM launched Quantum Experience (QX), which enables anyone to easily connect to its 5qubit quantum processors via the IBM Cloud to run algorithms and experiments. (https://www.research.ibm.com/ibm-q/). Along with it's platform, IBM also developped `QISKit`, a Python library for the Quantum Experience API, where useres can more easily apply quantum gates to qubit and implement complex quantum algorithms. 
 
 
 &nbsp;
