@@ -13,7 +13,7 @@ This repository is an introdution to quantum computing and contain the source co
 ## Quantum Gates
 
 <img align="left" src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/gate.png" width=150>
-In analogy with the classical gates NOT, AND, OR, ... that are the building blocks for circuits, there are quantum gates that perform basic operations on qubits. The most common quantum gates are summarized here --> https://en.wikipedia.org/wiki/Quantum_logic_gate. For example, the Hadamard gate, H, perform the following operartion:
+In analogy with the classical gates NOT, AND, OR, ... that are the building blocks for classical circuits, there are quantum gates that perform basic operations on qubits. The most common quantum gates are summarized here --> https://en.wikipedia.org/wiki/Quantum_logic_gate. For example, the Hadamard gate, H, perform the following operartion:
 <img align="left" src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/hadamar.png" width=550>
 
 
@@ -26,17 +26,16 @@ In analogy with the classical gates NOT, AND, OR, ... that are the building bloc
 ### Creating and measuring a Bell state
 The following code create a Bell state and measure it 1000 times. 
 
-<img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Bellblock.png" width=200>
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Bell.png" width=180>
 
 ```python
 from qiskit import QuantumProgram
 qp = QuantumProgram()
-qr = qp.create_quantum_register(2)           #Initialize 2 qubits to perform operations
-cr = qp.create_classical_register(2)         #Initialize 2 classical bits to store the measurements
+qr = qp.create_quantum_register('qr',2)      #Initialize 2 qubits to perform operations
+cr = qp.create_classical_register('qc',2)    #Initialize 2 classical bits to store the measurements
 qc = qp.create_circuit('Bell',[qr],[cr])
-qc.h(qr[0])                                  #Apply hadamar gate
-qc.cx(qr[0], qr[1])                          #Apply cx gate
+qc.h(qr[0])                                  #Apply Hadamar gate
+qc.cx(qr[0], qr[1])                          #Apply CNOT gate
 qc.measure(qr[0], cr[0])                     #Measure qubit 0 and store the result in bit 0
 qc.measure(qr[1], cr[1])                     #Measure qubit 1 and store the result in bit 1
 
