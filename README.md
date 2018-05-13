@@ -26,6 +26,7 @@ In analogy with the classical gates NOT, AND, OR, ... that are the building bloc
 ### Creating and measuring a Bell state
 The following code create a Bell state and measure it 1000 times. 
 
+<img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Bellblock.png" width=200>
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Bell.png" width=180>
 
 ```python
