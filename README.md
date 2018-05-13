@@ -34,8 +34,8 @@ qp = QuantumProgram()
 qr = qp.create_quantum_register(2)           #Initialize 2 qubits to perform operations
 cr = qp.create_classical_register(2)         #Initialize 2 classical bits to store the measurements
 qc = qp.create_circuit('Bell',[qr],[cr])
-qc.h(qr[0])                                  #Apply hadamar gate
-qc.cx(qr[0], qr[1])                          #Apply cx gate
+qc.h(qr[0])                                  #Apply Hadamar gate
+qc.cx(qr[0], qr[1])                          #Apply CNOT gate
 qc.measure(qr[0], cr[0])                     #Measure qubit 0 and store the result in bit 0
 qc.measure(qr[1], cr[1])                     #Measure qubit 1 and store the result in bit 1
 
