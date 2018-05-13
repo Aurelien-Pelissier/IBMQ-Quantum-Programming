@@ -31,8 +31,8 @@ The following code create a Bell state and measure it 1000 times.
 ```python
 from qiskit import QuantumProgram
 qp = QuantumProgram()
-qr = qp.create_quantum_register(2)           #Initialize 2 qubits to perform operations
-cr = qp.create_classical_register(2)         #Initialize 2 classical bits to store the measurements
+qr = qp.create_quantum_register('qr',2)      #Initialize 2 qubits to perform operations
+cr = qp.create_classical_register('qc',2)    #Initialize 2 classical bits to store the measurements
 qc = qp.create_circuit('Bell',[qr],[cr])
 qc.h(qr[0])                                  #Apply Hadamar gate
 qc.cx(qr[0], qr[1])                          #Apply CNOT gate
