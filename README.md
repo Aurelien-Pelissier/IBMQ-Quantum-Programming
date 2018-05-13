@@ -17,6 +17,10 @@ In analogy with the classical gates NOT, AND, OR, ... that are the building bloc
 <img align="left" src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/hadamar.png" width=120>
 
 
+
+&nbsp;
+
+
 ### Creating and measuring a Bell state
 
 
