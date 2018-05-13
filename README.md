@@ -11,3 +11,7 @@ In May 2016, IBM launched Quantum Experience (QX), which enables anyone to easil
 This repository is an introdution to quantum computing and countain the source code to run simples quantum algorithms. They are implemented with the python library `QISKit`, that can be easily installed with the command `$ pip install qiskit` (`Python 3.5` is required). More information is available at https://qiskit.org/.
 
 ## Quantum Gates
+
+
+
+## Shor's algorithm
