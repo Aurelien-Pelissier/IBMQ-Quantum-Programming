@@ -12,6 +12,11 @@ This repository is an introdution to quantum computing and countain the source c
 
 ## Quantum Gates
 
+<img align="right" src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/gate.jpg" width=200>
+In analogy with the classical gates NOT, AND, OR, ... that are the building blocks for circuits, there is quantum gates that perform basic operations on qubits. The most common quantum gates are summarized her --> https://en.wikipedia.org/wiki/Quantum_logic_gate. For example, the Hadamard gate, H, perform the following operartion:
+
+
+
 
 
 ## Shor's algorithm
