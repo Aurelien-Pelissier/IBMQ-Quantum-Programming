@@ -25,6 +25,22 @@ In analogy with the classical gates NOT, AND, OR, ... that are the building bloc
 
 ### Creating and measuring a Bell state
 
+```python
+from qiskit import QuantumProgram
+qp = QuantumProgram()
+qr = qp.create_quantum_register(2) #initialize 2 qubot to perform operations
+cr = qp.create_classical_register(2) #initialize 2 classical bot to store the measurements
+qc = qp.create_circuit('Bell',[qr],[cr])
+qc.h(qr[0])  #apply hadamar gate
+qc.cx(qr[0], qr[1]) #apply cx gate
+qc.measure(qr[0], cr[0])  #measure qubit 0 and store the result in bit 0
+qc.measure(qr[1], cr[1])  #measure qubit 1 and store the result in bit 1
+
+result = qp.execute('Bell', shots=1000) #Compile and run the Quantum Program 1000 times
+print(result.get_counts('Bell'))
+```
+
+
 
 
 &nbsp;
