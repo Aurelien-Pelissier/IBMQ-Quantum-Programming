@@ -24,7 +24,7 @@ In analogy with the classical gates NOT, AND, OR, ... that are the building bloc
 
 
 ### Creating and measuring a Bell state
-The following code create a Bell state and measure it.
+The following code create a Bell state and measure the result 1000 times.
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Bell.png" width=300>
 
 ```python
@@ -38,7 +38,7 @@ qc.cx(qr[0], qr[1])                          #Apply cx gate
 qc.measure(qr[0], cr[0])                     #Measure qubit 0 and store the result in bit 0
 qc.measure(qr[1], cr[1])                     #Measure qubit 1 and store the result in bit 1
 
-result = qp.execute('Bell', shots=1000) #Compile and run the Quantum Program 1000 times
+result = qp.execute('Bell', shots=1000)      #Compile and run the Quantum Program 1000 times
 print(result.get_counts('Bell'))
 ```
 
