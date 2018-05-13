@@ -25,7 +25,7 @@ In analogy with the classical gates NOT, AND, OR, ... that are the building bloc
 
 ### Creating and measuring a Bell state
 The following code create a Bell state and measure it.
-<img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Bell.png" width=150>
+<img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Bell.png" width=300>
 
 ```python
 from qiskit import QuantumProgram
