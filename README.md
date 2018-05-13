@@ -44,6 +44,10 @@ qc.measure(qr[1], cr[1])                     #Measure qubit 1 and store the resu
 result = qp.execute('Bell', shots=1000)      #Compile and run the Quantum Program 1000 times
 print(result.get_counts('Bell'))
 ```
+a possible result that we get is
+```python
+{'11': 494, '00': 506}
+```
 
 
 
