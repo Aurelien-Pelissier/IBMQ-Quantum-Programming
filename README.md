@@ -16,6 +16,9 @@ This repository is an introdution to quantum computing and countain the source c
 In analogy with the classical gates NOT, AND, OR, ... that are the building blocks for circuits, there is quantum gates that perform basic operations on qubits. The most common quantum gates are summarized here --> https://en.wikipedia.org/wiki/Quantum_logic_gate. For example, the Hadamard gate, H, perform the following operartion:
 
 
+### Creating and measuring a Bell state
+
+
 
 
 
