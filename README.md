@@ -20,11 +20,14 @@ In analogy with the classical gates NOT, AND, OR, ... that are the building bloc
 
 &nbsp;
 
+&nbsp;
+
 
 ### Creating and measuring a Bell state
 
 
 
+&nbsp;
 
 
 ## Shor's algorithm
