@@ -26,7 +26,7 @@ For example, the Hadamard gate, H, perform the following operartion:
 
 
 ### Creating and measuring a Bell state
-The following code create a Bell state and measure it 1000 times. 
+The following code, available in the `src` folder, create a Bell state and measure it 1000 times. 
 
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Bell.png" width=180>
 
