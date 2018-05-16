@@ -59,6 +59,9 @@ A possible result that we get is
 
 The [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm), proposed by Peter Shor in 1995, is today one of the most famous quantum algorithm. The algorithm is considerably significant because it enables to find 2 factors of a number in polynomial time with its number of digits, while the security of our online transactions rests on the assumption that factoring integers with a thousand or more digits is practically impossible. Shor's algorithm was first experimentally demonstrated in 2001 by a group at IBM, which factored 15 into 3 and 5, using a quantum computer of 7 qubits [1].
 
+
+&nbsp;
+
 ### Complexity of factoring
 
 <img align="right" src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/complexity.png" width=530>
@@ -66,9 +69,15 @@ Let N be the number to be factorized, and d~log(N) its number of digit. Then the
 
 This remarquable difference in the runtime scaling place the factoring problem into the [BQP\P](https://en.wikipedia.org/wiki/BQP) decision class (cf. figure in introduction).
 
+
+&nbsp;
+
 ### The Algorithm
 
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Shor.png" width=800>
+
+
+&nbsp;
 
 ### Simplified implementation
 
@@ -79,3 +88,6 @@ This remarquable difference in the runtime scaling place the factoring problem i
 ## References
 
 [1]: Vandersypen, L. M., Steffen, M., Breyta, G., Yannoni, C. S., Sherwood, M. H., & Chuang, I. L. (2001). Experimental realization of Shor's quantum factoring algorithm using nuclear magnetic resonance. Nature, 414(6866), 883. [https://www.nature.com/articles/414883a]
+
+
+[2]: Markov, I. L., & Saeedi, M. (2012). Constant-optimized quantum circuits for modular multiplication and exponentiation. arXiv preprint arXiv:1202.6614. [https://arxiv.org/abs/1202.6614]
