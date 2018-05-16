@@ -57,7 +57,7 @@ A possible result that we get is
 
 ## Shor's Algorithm
 
-The Shor's algorithm, proposed by Peter Shor in 1995, is probably one of the most famous quantum algorithm known by today. The algorithm is significant because it enables to find 2 factors of a number in polynomial time, while the security of our online transactions rests on the assumption that factoring integers with a thousand or more digits is practically impossible. Shor's algorithm was first experimentally demonstrated in 2001 by a group at IBM, which factored 15 into 3 and 5, using a quantum computer of 7 qubits.
+The Shor's algorithm, proposed by Peter Shor in 1995, is probably one of the most famous quantum algorithm known by today. The algorithm is significant because it enables to find 2 factors of a number in polynomial time with its number of digits, while the security of our online transactions rests on the assumption that factoring integers with a thousand or more digits is practically impossible. Shor's algorithm was first experimentally demonstrated in 2001 by a group at IBM, which factored 15 into 3 and 5, using a quantum computer of 7 qubits.
 
 ### Complexity of factoring
 
