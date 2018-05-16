@@ -62,7 +62,7 @@ The [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm), propos
 ### Complexity of factoring
 Let *N* be the number to be factorized, and *d*~log(*N*) it's number of digit. Then the most efficient classical factoring algorithm currently known is the [General number field sieve](https://en.wikipedia.org/wiki/General_number_field_sieve), which has an exponential asymptotic runtime to the number of digits : O(exp(*d*^1/3)). On the other hand, Shor’s factoring algorithm has an asymptotic runtime polynomial in *d* : O(*d*^3).
 
-<img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/complexity.png" width=500>
+<img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Complexity.jpg" width=500>
 
 This remarquable difference in the runtime scaling place the factoring problem into the [BQP\P](https://en.wikipedia.org/wiki/BQP) decision class (cf. figure in introduction).
 
