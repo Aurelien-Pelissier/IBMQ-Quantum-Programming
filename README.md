@@ -62,7 +62,7 @@ The [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm), propos
 ### Complexity of factoring
 The most efficient classical factoring algorithm currently known is the [General number field sieve](https://en.wikipedia.org/wiki/General_number_field_sieve), and it has an asymptotic runtime exponential to the number of digits (*d*) : O(exp(*d*^1/3)). On the other hand, Shor’s factoring algorithm has runtime polynomial in *d* : O(*d*^3).
 
-Factoring probleme is thus believed to be in BQP\P
+This remarquable difference in the runtime scaling place the factoring problem into the [BQP\P](https://en.wikipedia.org/wiki/BQP) decision problem.
 
 ### The Algorithm
 
