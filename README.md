@@ -79,6 +79,8 @@ This remarquable difference between polynomial and exponential runtime scaling c
 
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Shor.png" width=800>
 
+more complete description available on the [IBM User Guide](https://quantumexperience.ng.bluemix.net/proxy/tutorial/full-user-guide/004-Quantum_Algorithms/110-Shor's_algorithm.html).
+
 
 &nbsp;
 
