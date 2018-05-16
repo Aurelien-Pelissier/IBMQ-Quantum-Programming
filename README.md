@@ -84,7 +84,7 @@ This remarquable difference in the runtime scaling place the Factoring problem i
 
 ### Simplified implementation
 
-<img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/modulation.png" width=700>
+<img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/modulation.png" width=500>
 
 
 
