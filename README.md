@@ -8,14 +8,14 @@ During the past decade, considerable progress has been achieved regarding the de
 
 In May 2016, IBM launched Quantum Experience (QX), which enables anyone to easily connect to its 5qubit quantum processors via the IBM Cloud. (https://www.research.ibm.com/ibm-q/). Along with it's platform, IBM also developped `QISKit`, a Python library for the Quantum Experience API, where users can more easily apply quantum gates to run complex quantum algorithms and experiments.  
 
-This repository is an introdution to quantum computing and contain the source code to run simples quantum algorithms. They are implemented with the python library `QISKit`, that can be easily installed with the command `$ pip install qiskit` (`Python 3.5` is required). More information is available at https://qiskit.org/.
+This repository is an introdution to quantum computing and contains the source code to run simples quantum algorithms. They are implemented with the python library `QISKit`, that can be easily installed with the command `$ pip install qiskit` (`Python 3.5` is required). More information is available at https://qiskit.org/.
 
 ## Quantum Gates
 
-<img align="left" src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/gate.png" width=160>
+<img align="left" src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/gate.png" width=170>
 In analogy with the classical gates NOT, AND, OR, ... that are the building blocks for classical circuits, there are quantum gates that perform basic operations on qubits. The most common quantum gates are summarized here --> https://en.wikipedia.org/wiki/Quantum_logic_gate. 
 
-For example, the Hadamard gate, H, perform the following operartion:
+For example, the Hadamard gate, H, performs the following operartion:
 <img align="left" src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/hadamar.png" width=550>
 
 
@@ -26,7 +26,7 @@ For example, the Hadamard gate, H, perform the following operartion:
 
 
 ### Creating and measuring a Bell state
-The following code create a Bell state and measure it 1000 times. 
+The following code, available in the `src` folder, create a Bell state and measure it 1000 times. 
 
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Bell.png" width=180>
 
@@ -44,6 +44,10 @@ qc.measure(qr[1], cr[1])                     #Measure qubit 1 and store the resu
 result = qp.execute('Bell', shots=1000)      #Compile and run the Quantum Program 1000 times
 print(result.get_counts('Bell'))
 ```
+A possible result that we get is
+```python
+{'11': 494, '00': 506}
+```
 
 
 
@@ -51,4 +55,22 @@ print(result.get_counts('Bell'))
 &nbsp;
 
 
-## Shor's algorithm
+## Shor's Algorithm
+
+The [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm), proposed by Peter Shor in 1995, is today one of the most famous quantum algorithm. The algorithm is considerably significant because it enables to find 2 factors of a number in polynomial time with its number of digits, while the security of our online transactions rests on the assumption that factoring integers with a thousand or more digits is practically impossible. Shor's algorithm was first experimentally demonstrated in 2001 by a group at IBM, which factored 15 into 3 and 5, using a quantum computer of 7 qubits [1].
+
+### Complexity of factoring
+Let *N* be the number to be factorized, and *d*~log(*N*) it's number of digit. Then the most efficient classical factoring algorithm currently known is the [General number field sieve](https://en.wikipedia.org/wiki/General_number_field_sieve), which has an exponential asymptotic runtime to the number of digits : O(exp(*d*^1/3)). On the other hand, Shor’s factoring algorithm has an asymptotic runtime polynomial in *d* : O(*d*^3).
+
+<img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/complexity.png" width=500>
+
+This remarquable difference in the runtime scaling place the factoring problem into the [BQP\P](https://en.wikipedia.org/wiki/BQP) decision class (cf. figure in introduction).
+
+### The Algorithm
+
+### Simplified implementation
+
+
+## References
+
+[1]: Vandersypen, L. M., Steffen, M., Breyta, G., Yannoni, C. S., Sherwood, M. H., & Chuang, I. L. (2001). Experimental realization of Shor's quantum factoring algorithm using nuclear magnetic resonance. Nature, 414(6866), 883. [https://www.nature.com/articles/414883a]
