@@ -60,7 +60,7 @@ A possible result that we get is
 The [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm), proposed by Peter Shor in 1995, is today one of the most famous quantum algorithm. The algorithm is considerably significant because it enables to find 2 factors of a number in polynomial time with its number of digits, while the security of our online transactions rests on the assumption that factoring integers with a thousand or more digits is practically impossible. Shor's algorithm was first experimentally demonstrated in 2001 by a group at IBM, which factored 15 into 3 and 5, using a quantum computer of 7 qubits.
 
 ### Complexity of factoring
-The most efficient classical factoring algorithm currently known is the [General number field sieve](https://en.wikipedia.org/wiki/General_number_field_sieve), and it has an asymptotic runtime exponential to the number of digits (*d*) : O(exp(*d*^1/3)). On the other hand, Shor’s factoring algorithm has runtime polynomial in *d* : O(*d*^3).
+Let *N* be the number to be factorized, and *d*~log(*N*) it's number of digit. Then the most efficient classical factoring algorithm currently known is the [General number field sieve](https://en.wikipedia.org/wiki/General_number_field_sieve), which has an exponential asymptotic runtime to the number of digits : O(exp(*d*^1/3)). On the other hand, Shor’s factoring algorithm has an asymptotic runtime polynomial in *d* : O(*d*^3).
 
 This remarquable difference in the runtime scaling place the factoring problem into the [BQP\P](https://en.wikipedia.org/wiki/BQP) decision class (cf. figure in introduction).
 
