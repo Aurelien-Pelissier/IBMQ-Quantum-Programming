@@ -68,8 +68,13 @@ This remarquable difference in the runtime scaling place the factoring problem i
 
 ### The Algorithm
 
+<img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Shor.png" width=500>
+
 ### Simplified implementation
 
+
+
+&nbsp;
 
 ## References
 
