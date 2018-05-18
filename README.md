@@ -83,12 +83,17 @@ We want to find two factors *p1* and *p2* that divide N. Before diving into the 
 
 ```python
 def Check(N):
+
     if N % 2 == 0:
         print ("2 is a trivial factor")
+        return False
         
     for k in range(1,int(log2(N))):
         if (N**(1/k)).is_integer():
             print ("N =", N**(1/k)), "^", k)
+            return False
+    
+    return True
 ```
 
 #### Classical part
@@ -97,6 +102,7 @@ With some Arithmetic, Group theory, Euler's Theorem and Bézout's identity, it i
 
 ```python
 def Shor(N):
+
     while True:
     
         #1) pick a random number a<N
@@ -109,15 +115,12 @@ def Shor(N):
             p2 = N/p
             break
         
-        #3) Compute the periode r, if r is a goof period, we found prime factors
-        else:            
-            
-            r = quantum_period(a,N)  #Quantum part of the algorithm
-        
-            if r % 2 == 0 :
-                if a**(r/2) % N != -1:
-                    p1 = gcd(a**(r/2)-1,N)
-                    p2 = gcd(a**(r/2)+1,N)
+        #3) Compute the periode r, if r is a goof period, we found prime factors         
+        r = quantum_period(a,N)  #Quantum part of the algorithm
+        if r % 2 == 0 :
+            if a**(r/2) % N != -1:
+                p1 = gcd(a**(r/2)-1,N)
+                p2 = gcd(a**(r/2)+1,N)
                 
     return p1, p2
 ```
