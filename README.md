@@ -1,3 +1,6 @@
+<img src="images/qiskit-heading.gif" >
+
+
 # Quantum Computing
 
 <img align="right" src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Complexity.jpg" width=450>
