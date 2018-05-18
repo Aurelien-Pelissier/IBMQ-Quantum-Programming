@@ -35,6 +35,7 @@ The following code, available in the `src` folder, create a Bell state and measu
 
 ```python
 from qiskit import QuantumProgram
+
 qp = QuantumProgram()
 qr = qp.create_quantum_register('qr',2)      #Initialize 2 qubits to perform operations
 cr = qp.create_classical_register('qc',2)    #Initialize 2 classical bits to store the measurements
