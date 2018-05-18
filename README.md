@@ -101,7 +101,7 @@ def Check(N):
 
 #### Classical part
 
-With some Arithmetic, Group theory, Euler's Theorem and Bézout's identity, it is possible to reduce the factorization problem into a period finding problem of the modular exponential function (see for more details). The classical part of the algorithm is implemented as follow:
+With some Arithmetic, Group theory, Euler's Theorem and Bézout's identity, it is possible to reduce the factorization problem into a period finding problem of the modular exponential function (see [this page](https://en.wikipedia.org/wiki/Shor%27s_algorithm) for more details). The classical part of the algorithm is implemented as follow:
 
 ```python
 def Shor(N):
@@ -124,6 +124,7 @@ def Shor(N):
             if a**(r/2) % N != -1:
                 p1 = gcd(a**(r/2)-1,N)
                 p2 = gcd(a**(r/2)+1,N)
+                break
                 
     return p1, p2
 ```
