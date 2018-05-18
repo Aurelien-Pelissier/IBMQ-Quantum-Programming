@@ -126,6 +126,7 @@ def Shor(N):
                 p2 = gcd(a**(r/2)+1,N)
                 break
                 
+    print ("N =", p1, "*", p2)
     return p1, p2
 ```
 
