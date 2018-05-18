@@ -77,10 +77,7 @@ This remarquable difference between polynomial and exponential runtime scaling c
 
 ### The Algorithm
 
-#### Preambule
-
-We want to find two factors *p1* and *p2* that divide N. Before diving into the algorithm, we have to make sure that:
-
+We want to find two factors *p1* and *p2* that divide N. Before diving into the algorithm, we have to make sure that:  
 * N is odd (if it's even, then 2 is a trivial factor)
 * N is not the power of a prime
 
