@@ -77,6 +77,50 @@ This remarquable difference between polynomial and exponential runtime scaling c
 
 ### The Algorithm
 
+#### Preambule
+
+We want to find two factors *p1* and *p2* that divide N. Before diving into the algorithm, we have to make sure that:
+⋅⋅* N is odd (if it's even, then 2 is a trivial factor)
+⋅⋅* N is not the power of a prime
+
+#### Classical part
+
+With some Arithmetic, Group theory, Euler's Theorem and Bézout's identity, it is possible to reduce the factorization problem into a period finding problem of the modular exponential function (see for more details). The classical part of the algorithm is implemented as follow:
+```
+def Shor(N):
+    while True:
+    
+        #1) pick a random number a<N
+        a = randint(1, N-1)    
+    
+        #2) check for the GCD(a,N)
+        p = gcd(a,N)
+        if p != 1:  # We found a nontrivial factor
+            p1 = p
+            p2 = N/p
+            break
+        
+        #3) Compute the periode r, if r is a goof period, we found prime factors
+        else:            
+            
+            r = quantum_period(a,N)
+        
+            if r % 2 == 0 :
+                if a**(r/2) % N != -1:
+                    p1 = gcd(a**(r/2)-1,N)
+                    p2 = gcd(a**(r/2)+1,N)
+                
+    return p1, p2
+```
+
+
+#### Period finding
+
+##### Modular Exponentiation
+
+
+##### Controlled gates
+
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Shor.png" width=800>
 
 More complete description available on the [IBM User Guide](https://quantumexperience.ng.bluemix.net/proxy/tutorial/full-user-guide/004-Quantum_Algorithms/110-Shor's_algorithm.html).
