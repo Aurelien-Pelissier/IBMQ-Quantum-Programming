@@ -118,10 +118,10 @@ def Shor(N):
             p2 = N/p
             break
         
-        #3) Compute the periode r, if r is a goof period, we found prime factors         
+        #3) Compute the periode r      
         r = quantum_period(a,N)  #Quantum part of the algorithm
         if r % 2 == 0 :
-            if a**(r/2) % N != -1:
+            if a**(r/2) % N != -1:  #If r is a goof period, we found prime factors   
                 p1 = gcd(a**(r/2)-1,N)
                 p2 = gcd(a**(r/2)+1,N)
                 break
