@@ -80,8 +80,9 @@ This remarquable difference between polynomial and exponential runtime scaling c
 #### Preambule
 
 We want to find two factors *p1* and *p2* that divide N. Before diving into the algorithm, we have to make sure that:
-⋅⋅* N is odd (if it's even, then 2 is a trivial factor)
-⋅⋅* N is not the power of a prime
+
+* N is odd (if it's even, then 2 is a trivial factor)
+* N is not the power of a prime
 
 #### Classical part
 
@@ -103,7 +104,7 @@ def Shor(N):
         #3) Compute the periode r, if r is a goof period, we found prime factors
         else:            
             
-            r = quantum_period(a,N)
+            r = quantum_period(a,N)  #Quantum part of the algorithm
         
             if r % 2 == 0 :
                 if a**(r/2) % N != -1:
