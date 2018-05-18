@@ -1,4 +1,4 @@
-<img src="images/qiskit-heading.gif" >
+<img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/qiskit-heading.gif" >
 
 
 # Quantum Computing
