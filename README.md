@@ -64,6 +64,7 @@ A possible result that we get is
 The [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm), proposed by Peter Shor in 1995 [2], is today one of the most famous quantum algorithm; it is considerably significant because, while the security of our online transactions rests on the assumption that factoring integers with a thousand or more digits is practically impossible, the algorithm enables to find 2 factors of a number in polynomial time with its number of digits. Shor's algorithm was first experimentally demonstrated in 2001 by a group at IBM, which factored 15 into 3 and 5, using a quantum computer of 7 qubits [3].  
 
 
+&nbsp;
 
 ### Complexity of factoring
 
