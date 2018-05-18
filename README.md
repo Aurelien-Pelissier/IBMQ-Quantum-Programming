@@ -86,7 +86,7 @@ We want to find two factors *p1* and *p2* that divide N. Before diving into the 
 #### Classical part
 
 With some Arithmetic, Group theory, Euler's Theorem and Bézout's identity, it is possible to reduce the factorization problem into a period finding problem of the modular exponential function (see for more details). The classical part of the algorithm is implemented as follow:
-```
+```python
 def Shor(N):
     while True:
     
