@@ -149,11 +149,9 @@ We want to find *r* the period of the modular exponentiation function <img src="
 * Calculate irreducible form of *y*/*N* and extract the denominator *r*
 * Check if *r* is a period, if not, try again from begining
 
-The tricky part is the implementation of the controlled quatum modular exponentiation U.
-
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Shor.png" width=800>
 
-More complete description available on the [IBM User Guide](https://quantumexperience.ng.bluemix.net/proxy/tutorial/full-user-guide/004-Quantum_Algorithms/110-Shor's_algorithm.html).
+The trickiest part is the implementation of the controlled quatum modular exponentiation U. More complete description available on the [IBM User Guide](https://quantumexperience.ng.bluemix.net/proxy/tutorial/full-user-guide/004-Quantum_Algorithms/110-Shor's_algorithm.html).
 
 
 &nbsp;
