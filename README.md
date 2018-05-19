@@ -73,7 +73,7 @@ The [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm), propos
 ### Complexity of factoring
 
 <img align="right" src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/complexity.png" width=510>
-Let N be the number to be factorized, and d~log(N) its number of digit. Then the most efficient classical factoring algorithm currently known is the [General number field sieve](https://en.wikipedia.org/wiki/General_number_field_sieve), which has an exponential asymptotic runtime to the number of digits : O(exp(d^1/3)). On the other hand, Shor’s factoring algorithm has an asymptotic runtime polynomial in d : O(d^3). 
+Let N be the number to be factorized, and d=log2(N) its number of digit. Then the most efficient classical factoring algorithm currently known is the [General number field sieve](https://en.wikipedia.org/wiki/General_number_field_sieve), which has an exponential asymptotic runtime to the number of digits : O(exp(d^1/3)). On the other hand, Shor’s factoring algorithm has an asymptotic runtime polynomial in d : O(d^3). 
 
 This remarquable difference between polynomial and exponential runtime scaling currently places the Factoring problem into the [BQP\P](https://en.wikipedia.org/wiki/BQP) decision class (cf. figure in introduction).
 
@@ -137,26 +137,26 @@ def Shor(N):
 ```
 
 
-#### Period finding subroutine
-We want to find *r* the period of the modular exponentiation function <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/modular.png" width=128>, which is the smallest positive integer for which <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/period.png" width=125>. Given a *d* digit number *N* and a number *a*, the periode finding subroutine proceed as follow:
+### Period finding subroutine
+We want to find *r* the period of the modular exponentiation function <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/modular.png" width=128>, which is the smallest positive integer for which <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/period.png" width=125>. Given the numbers *N* and *a*, the period finding subroutine of the modular exponentiation function proceed as follow:
 
-* Prepare *d* qubit to store *N* in the input register
-* Prepare *n* qubit for the output register (where 2^*n* ~ *N*^2)
+* Initialize *d* qubit to store *N* in the input register (d = log2(N) )
+* Initialize *n* qubit for the output register (where 2^*n* ~ *N*^2)
 * Apply Hadamard Gate to all qubit of the output register
-* Apply the modulo exponentiation transformation Ua, Ua^2, Ua^4, U^8, .., Ua^(2^(2*n*-1))
-* Apply the inverse QFT to the register
-* Measure the output
-
-The tricky part is the implementation of the controlled quatum modular exponentiation.
+* Apply the controled modulo exponentiation gates *Ua*, *Ua*^2, *Ua*^4, *Ua*^8, .., *Ua*^(2^(2*n*-1)) to the input register
+* Apply the inverse QFT to the output register
+* Measure the output *y*
+* Calculate irreducible form of *y*/*N* and extract the denominator *r*
+* Check if *r* is a period, if not, try again from begining
 
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Shor.png" width=800>
 
-More complete description available on the [IBM User Guide](https://quantumexperience.ng.bluemix.net/proxy/tutorial/full-user-guide/004-Quantum_Algorithms/110-Shor's_algorithm.html).
+The trickiest part is the implementation of the controlled quatum modular exponentiation *U*, that can be found in [4]. A more complete description is available on the [IBM User Guide](https://quantumexperience.ng.bluemix.net/proxy/tutorial/full-user-guide/004-Quantum_Algorithms/110-Shor's_algorithm.html).
 
 
 &nbsp;
 
-### Simplified implementation
+#### Simplified implementation
 
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/modulation.png" width=500>
 
