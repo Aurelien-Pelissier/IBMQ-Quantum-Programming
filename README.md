@@ -146,10 +146,9 @@ We want to find *r* the period of the modular exponentiation function <img src="
 * Apply the controled modulo exponentiation gate Ua, Ua^2, Ua^4, U^8, .., Ua^(2^(2*n*-1)) to the input register
 * Apply the inverse QFT to the output register
 * Measure the output *y*
-* Calculate irreducible form of *y*/*N*
-* Calculate *r* =
+* Calculate irreducible form of *y*/*N* and extract the denominator *r*
 
-The tricky part is the implementation of the controlled quatum modular exponentiation.
+The tricky part is the implementation of the controlled quatum modular exponentiation U.
 
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Shor.png" width=800>
 
