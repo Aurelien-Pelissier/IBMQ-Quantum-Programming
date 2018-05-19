@@ -143,7 +143,7 @@ We want to find *r* the period of the modular exponentiation function <img src="
 * Prepare *d* qubit to store *N* in the input register
 * Prepare *n* qubit for the output register (where 2^*n* ~ *N*^2)
 * Apply Hadamard Gate to all qubit of the output register
-* Apply the controled modulo exponentiation gate Ua, Ua^2, Ua^4, U^8, .., Ua^(2^(2*n*-1)) to the input register
+* Apply the controled modulo exponentiation gates Ua, Ua^2, Ua^4, U^8, .., Ua^(2^(2*n*-1)) to the input register
 * Apply the inverse QFT to the output register
 * Measure the output *y*
 * Calculate irreducible form of *y*/*N* and extract the denominator *r*
