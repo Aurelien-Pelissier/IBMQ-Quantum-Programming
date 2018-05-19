@@ -140,13 +140,14 @@ def Shor(N):
 #### Period finding subroutine
 We want to find *r* the period of the modular exponentiation function <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/modular.png" width=128>, which is the smallest positive integer for which <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/period.png" width=125>. Given the numbers *N* and *a*, the period finding subroutine of the modular exponentiation function proceed as follow:
 
-* Prepare *d* qubit to store *N* in the input register
-* Prepare *n* qubit for the output register (where 2^*n* ~ *N*^2)
+* Initialize *d* qubit to store *N* in the input register (d = log2(N) )
+* Initialize *n* qubit for the output register (where 2^*n* ~ *N*^2)
 * Apply Hadamard Gate to all qubit of the output register
 * Apply the controled modulo exponentiation gates *Ua*, *Ua*^2, *Ua*^4, *Ua*^8, .., *Ua*^(2^(2*n*-1)) to the input register
 * Apply the inverse QFT to the output register
 * Measure the output *y*
 * Calculate irreducible form of *y*/*N* and extract the denominator *r*
+* Check if *r* is a period, if not, try again from begining
 
 The tricky part is the implementation of the controlled quatum modular exponentiation U.
 
