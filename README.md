@@ -146,7 +146,7 @@ We want to find *r* the period of the modular exponentiation function <img src="
 * Apply the modulo exponentiation transformation Ua, Ua^2, Ua^4, U^8, .., Ua^(2^(2*n*-1))
 * Apply the inverse QFT to the register
 * Measure the output *y*
-* Calculate irredictible form of *y*/*N*
+* Calculate irreducible form of *y*/*N*
 * Calculate *r* =
 
 The tricky part is the implementation of the controlled quatum modular exponentiation.
