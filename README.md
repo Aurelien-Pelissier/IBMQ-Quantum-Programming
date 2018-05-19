@@ -12,7 +12,7 @@ During the past decade, considerable progress has been achieved regarding the de
 In May 2016, IBM launched Quantum Experience (QX), which enables anyone to easily connect to its 5qubit quantum processors via the IBM Cloud. (https://www.research.ibm.com/ibm-q/). Along with it's platform, IBM also developped `QISKit`, a Python library for the Quantum Experience API, where users can more easily apply quantum gates to run complex quantum algorithms and experiments.  
 
 
-<img align="left" src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/qiskit-logo.gif" width=150>
+<img align="left" src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/qiskit-logo.gif" width=100>
 This repository is an introdution to quantum computing and contains the source code to run simples quantum algorithms. They are implemented with the python library `QISKit`, that can be easily installed with the command `$ pip install qiskit` (`Python 3.5` is required). More information is available at https://qiskit.org/.
 
 
