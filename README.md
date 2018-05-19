@@ -142,7 +142,7 @@ We want to find *r* the period of the modular exponentiation function <img src="
 
 * Prepare *d* qubit to store *N* in the input register
 * Prepare *n* qubit for the output register (where 2^*n* ~ *N*^2)
-* Apply Hadamard Gate to all qubit of the register
+* Apply Hadamard Gate to all qubit of the output register
 * Apply the modulo exponentiation transformation Ua, Ua^2, Ua^4, U^8, .., Ua^(2^(2*n*-1))
 * Apply the inverse QFT to the register
 * Measure the output
