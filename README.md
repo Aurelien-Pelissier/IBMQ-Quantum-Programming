@@ -140,6 +140,7 @@ def Shor(N):
 #### Period finding
 
 ##### Modular Exponentiation
+We want to find *r* the period of the modular exponentiation function <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/modular.png" width=50>. *r* is the smallest positive integer for which <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/periodr.png" width=50>.
 
 
 ##### Controlled gates
