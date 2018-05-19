@@ -138,7 +138,7 @@ def Shor(N):
 
 
 ### Period finding subroutine
-We want to find *r* the period of the modular exponentiation function <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/modular.png" width=128>, which is the smallest positive integer for which <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/period.png" width=125>. Given the numbers *N* and *a*, the period finding subroutine of the modular exponentiation function proceed as follow:
+We want to find *r* the period of the modular exponentiation function <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/modular.png" width=128>, which is the smallest positive integer for which <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/period.png" width=123>. Given the numbers *N* and *a*, the period finding subroutine of the modular exponentiation function proceed as follow:
 
 * Initialize *n0* qubit to store *N* in the input register (*n0* = log2(N) )
 * Initialize *n* qubit for the output register (where 2^*n* ~ *N*^2)
