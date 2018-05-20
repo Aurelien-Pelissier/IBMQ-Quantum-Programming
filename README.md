@@ -152,7 +152,8 @@ We want to find *r* the period of the modular exponentiation function <img src="
 * Apply the inverse QFT to the output register
 * Measure the output *y*
 * Calculate the irreducible form of *y*/*N* and extract the denominator *r*
-* Check if *r* is a period, if not, check multiples of *r* or try again from begining
+* Check if *r* is a period, if not, check multiples of *r*
+* If period not found, try again from the beginning
 
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Shor.png" width=800>
 
