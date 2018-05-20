@@ -166,7 +166,7 @@ Details about how and why this algorithm works can be found in the [IBM User Gui
 
 #### Simplified implementation
 
-Because the implementation of controlled modular exponentiation and inverse QFT are too difficult in the general case, only a special case is implemented as a proof of concept, and the period finding subroutne is coded for *N=15* and *a* = 7. The non controlled gate *U7* can be implemented as follow [4]:
+Because the implementation of controlled modular exponentiation and inverse QFT are too difficult in the general case, only a particular case is implemented as a proof of concept, and the period finding subroutne is coded for *N=15* and *a* = 7. The non controlled gate *U7* can be implemented as follow [4]:
 
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/modulation.png" width=500>
 
