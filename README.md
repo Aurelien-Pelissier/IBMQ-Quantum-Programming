@@ -157,7 +157,7 @@ We want to find *r* the period of the modular exponentiation function <img src="
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Shor.png" width=800>
 
 The quantum gate *Ua* refers to the unitary operator that perform the modular multiplication function *x → ax (modN)*.
-The implementation of controlled *Ua* as well as the inverfe QFT gate are relatively complex and the optimal way to do it is still an open problem [4,5].
+The implementation of controlled *Ua* as well as the inverfe QFT gate are relatively complex and there exist various way to do it [4,5].
 Details about how and why this algorithm works can be found in the [IBM User Guide](https://quantumexperience.ng.bluemix.net/proxy/tutorial/full-user-guide/004-Quantum_Algorithms/110-Shor's_algorithm.html).
 
 
@@ -185,3 +185,6 @@ Because the implementation of controlled modular exponentiation and inverse QFT 
 
 
 [4]: Markov, I. L., & Saeedi, M. (2012). Constant-optimized quantum circuits for modular multiplication and exponentiation. arXiv preprint arXiv:1202.6614. [https://arxiv.org/abs/1202.6614]
+
+
+[5]: Draper, T. G. (2000). Addition on a quantum computer. arXiv preprint quant-ph/0008033. [https://arxiv.org/abs/quant-ph/0008033}
