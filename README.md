@@ -156,12 +156,16 @@ We want to find *r* the period of the modular exponentiation function <img src="
 
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Shor.png" width=800>
 
-The trickiest part is the implementation of the controlled quatum modular exponentiation *U*, that can be found in [4]. A more complete description is available in the [IBM User Guide](https://quantumexperience.ng.bluemix.net/proxy/tutorial/full-user-guide/004-Quantum_Algorithms/110-Shor's_algorithm.html).
+The quantum gate *Ua* refers to the unitary operator that perform the modular multiplication function *x → ax (modN)*
+The implementation of *Ua* as well as inverfe QFT are relatively complex and the optimal way to do it is still an open problem [4,5].
+Details about how and why this algorithm works can be found in the [IBM User Guide](https://quantumexperience.ng.bluemix.net/proxy/tutorial/full-user-guide/004-Quantum_Algorithms/110-Shor's_algorithm.html).
 
 
 &nbsp;
 
 #### Simplified implementation
+
+Because the implementation of controlled modular exponentiation and inverse QFT is very complex, only a special case is implemented as a proof of concept. The subroutne has been 
 
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/modulation.png" width=500>
 
