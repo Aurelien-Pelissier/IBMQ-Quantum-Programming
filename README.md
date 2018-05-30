@@ -96,8 +96,8 @@ def Check(N):
         return False
         
     for k in range(2,int(log(N,2))): #log2(N)
-        if (N**(1/k)).is_integer():
-            print ("N =", N**(1/k)), "^", k)
+        if (pow(N,(1/k)).is_integer():
+            print ("N =", pow(N,(1/k)), "^", k)
             return False
     
     return True
