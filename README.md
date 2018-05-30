@@ -73,7 +73,7 @@ The [Shor's algorithm](https://en.wikipedia.org/wiki/Shor%27s_algorithm), propos
 ### Complexity of factoring
 
 <img align="right" src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/complexity.png" width=510>
-Let N be the number to be factorized, and d=log2(N) its number of digit. Then the most efficient classical factoring algorithm currently known is the [General number field sieve](https://en.wikipedia.org/wiki/General_number_field_sieve), which has an exponential asymptotic runtime to the number of digits : O(exp(d^1/3)). On the other hand, Shor’s factoring algorithm has an asymptotic runtime polynomial in d : O(d^3). 
+Let N be the number to be factorized, and d=log2(N) its number of digit. The most efficient classical factoring algorithm currently known is the [General number field sieve](https://en.wikipedia.org/wiki/General_number_field_sieve), which has an exponential asymptotic runtime to the number of digits : O(exp(d^1/3)). On the other hand, Shor’s factoring algorithm has an asymptotic runtime polynomial in d : O(d^3). 
 
 This remarquable difference between polynomial and exponential runtime scaling currently places the Factoring problem into the [BQP\P](https://en.wikipedia.org/wiki/BQP) decision class (cf. figure in introduction).
 
@@ -95,13 +95,16 @@ def Check(N):
         print ("2 is a trivial factor")
         return False
         
-    for k in range(1,int(log(N,2))): #log2(N)
-        if (N**(1/k)).is_integer():
-            print ("N =", N**(1/k)), "^", k)
+    for k in range(2,int(log(N,2))): #log2(N)
+        if (pow(N,(1/k)).is_integer():
+            print ("N =", pow(N,(1/k)), "^", k)
             return False
     
     return True
 ```
+
+
+&nbsp;
 
 #### Classical part
 
@@ -137,29 +140,37 @@ def Shor(N):
 ```
 
 
-### Period finding subroutine
-We want to find *r* the period of the modular exponentiation function <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/modular.png" width=128>, which is the smallest positive integer for which <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/period.png" width=125>. Given the numbers *N* and *a*, the period finding subroutine of the modular exponentiation function proceed as follow:
+&nbsp;
 
-* Initialize *d* qubit to store *N* in the input register (d = log2(N) )
+### Period finding subroutine
+We want to find *r* the period of the modular exponentiation function <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/modular.png" width=128>, which is the smallest positive integer for which <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/period.png" width=123>. Given the numbers *N* and *a*, the period finding subroutine of the modular exponentiation function proceed as follow:
+
+* Initialize *n0* qubit and store *N* in the input register (*n0* = log2(*N*) )
 * Initialize *n* qubit for the output register (where 2^*n* ~ *N*^2)
-* Apply Hadamard Gate to all qubit of the output register
-* Apply the controled modulo exponentiation gates *Ua*, *Ua*^2, *Ua*^4, *Ua*^8, .., *Ua*^(2^(2*n*-1)) to the input register
+* Apply Hadamard Gate to all of the qubit in the output register
+* Apply the controled modular exponentiation gates *Ua*, *Ua*^2, *Ua*^4, *Ua*^8, .., *Ua*^(2^(2*n*-1)) to the input register
 * Apply the inverse QFT to the output register
 * Measure the output *y*
-* Calculate irreducible form of *y*/*N* and extract the denominator *r*
-* Check if *r* is a period, if not, try again from begining
+* Calculate the irreducible form of *y*/*N* and extract the denominator *r*
+* Check if *r* is a period, if not, check multiples of *r*
+* If period not found, try again from the beginning
 
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/Shor.png" width=800>
 
-The trickiest part is the implementation of the controlled quatum modular exponentiation *U*, that can be found in [4]. A more complete description is available on the [IBM User Guide](https://quantumexperience.ng.bluemix.net/proxy/tutorial/full-user-guide/004-Quantum_Algorithms/110-Shor's_algorithm.html).
+The quantum gate *Ua* refers to the unitary operator that perform the modular exponentiation function *x → a^x (modN)*.
+The implementation of controlled *Ua* as well as the inverfe QFT gate are relatively complex [4,5], and the "right" gate set to use is currently still an open question (plus it also depends the architecture used for the quantum computer).
+Details about how and why this algorithm works can be found in the [IBM User Guide](https://quantumexperience.ng.bluemix.net/proxy/tutorial/full-user-guide/004-Quantum_Algorithms/110-Shor's_algorithm.html).
 
 
 &nbsp;
 
 #### Simplified implementation
 
+Because the implementation of controlled modular exponentiation and inverse QFT are too difficult in the general case, only a particular case is implemented as a proof of concept, and the period finding subroutne is coded for *N=15* and *a* = 7. The non controlled gate *U7* can be implemented as follow [4]:
+
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/modulation.png" width=500>
 
+We loop until the obtained quantum state is the same as the one when we started, the implementation can be found in `src/Shor_simplified`.
 
 
 &nbsp;
@@ -176,3 +187,6 @@ The trickiest part is the implementation of the controlled quatum modular expone
 
 
 [4]: Markov, I. L., & Saeedi, M. (2012). Constant-optimized quantum circuits for modular multiplication and exponentiation. arXiv preprint arXiv:1202.6614. [https://arxiv.org/abs/1202.6614]
+
+
+[5]: Draper, T. G. (2000). Addition on a quantum computer. arXiv preprint quant-ph/0008033. [https://arxiv.org/abs/quant-ph/0008033}
