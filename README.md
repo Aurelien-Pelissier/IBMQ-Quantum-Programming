@@ -95,7 +95,7 @@ def Check(N):
         print ("2 is a trivial factor")
         return False
         
-    for k in range(1,int(log(N,2))): #log2(N)
+    for k in range(2,int(log(N,2))): #log2(N)
         if (N**(1/k)).is_integer():
             print ("N =", N**(1/k)), "^", k)
             return False
