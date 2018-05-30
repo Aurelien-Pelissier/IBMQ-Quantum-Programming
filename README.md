@@ -170,6 +170,7 @@ Because the implementation of controlled modular exponentiation and inverse QFT 
 
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/modulation.png" width=500>
 
+We loop until the obtained quantum state is the same as the one when we started, the implementation can be found in `src/Shor_simplified`.
 
 
 &nbsp;
