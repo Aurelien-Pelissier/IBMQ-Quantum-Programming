@@ -180,11 +180,11 @@ The simplified subroutine proceed as follow:
 ``` python
 Statrting at 
       s = 3 = [True True False False False]
-        11000
-        01000
-        10000
-        01100
-        11000
+        "11000"
+        "01000"
+        "10000"
+        "01100"
+        "11000"
 
       Found period r = 4
  ```
