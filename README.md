@@ -170,7 +170,28 @@ Because the implementation of controlled modular exponentiation and inverse QFT 
 
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/modulation.png" width=500>
 
-We loop until the obtained quantum state is the same as the one when we started, the implementation can be found in `src/Shor_simplified`.
+The simplified subroutine proceed as follow:
+
+* Pick a ransom number *s* between 1 and N-1
+* Decompose *s* into binary units and store *s* in the input register
+* Apply the modular exponentiation gate until the output match with *s*
+* the period *r* is the number of time *Ua* has been applied
+
+``` python
+Statrting at 
+      s = 3 = [True True False False False]
+        11000
+        01000
+        10000
+        01100
+        11000
+
+      Found period r = 4
+ ```
+
+Although this implementation does not use the properties of quantum computers to find *r* in polynomial time, it is a proof of concept of the modular exonentiation quantum implementation. The code can be found in `src/Shor_simplified`.
+
+
 
 
 &nbsp;
