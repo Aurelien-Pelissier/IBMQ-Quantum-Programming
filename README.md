@@ -170,7 +170,7 @@ Because the implementation of controlled modular exponentiation and inverse QFT 
 
 <img src="https://raw.githubusercontent.com/Aurelien-Pelissier/IBMQ-Quantum-Computing/master/img/modulation.png" width=500>
 
-The simplified subroutine is then carried on by applying modular exponentiation until the period is found:
+The simplified subroutine is then carried on by successively applying modular exponentiation until the period is found:
 
 * Pick a ransom number *s* between 1 and N-1
 * Decompose *s* into binary units and store *s* in the input register
