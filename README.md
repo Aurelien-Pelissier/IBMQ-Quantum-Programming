@@ -189,7 +189,7 @@ Statrting at
       Found period r = 4
  ```
 
-Although this implementation does not use the properties of quantum computers to find *r* in polynomial time, it is a proof of concept of the modular exonentiation quantum implementation. The code can be found in `src/Shor_simplified`.
+Although this implementation does not use the properties of quantum computers to find *r* in polynomial time, it is a proof of concept of the modular exponentiation quantum implementation. The code can be found in `src/Shor_simplified`.
 
 
 
