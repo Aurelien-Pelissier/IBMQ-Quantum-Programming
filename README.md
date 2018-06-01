@@ -174,7 +174,7 @@ The simplified subroutine is then carried on by successively applying modular ex
 
 * Pick a ransom number *s* between 1 and N-1
 * Decompose *s* into binary units and store *s* in the input register
-* Apply the modular exponentiation gate until the output match with *s*
+* Apply the modular exponentiation gate successively until the output match with *s*
 * the period *r* is the number of time *Ua* has been applied
 
 ``` python
