@@ -1,4 +1,4 @@
-### Disclaimer: 
+## Disclaimer: 
 
 ### The Qiski code in this repository is now depreciated. For an up-to-date implementation of the Shor's algorithm, check out [This repository](https://github.com/Aurelien-Pelissier/Medium/blob/main/Quantum%20Programming)
 
